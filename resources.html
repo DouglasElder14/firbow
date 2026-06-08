@@ -798,13 +798,28 @@
 <div class="res-section" id="getting-started">
   <div class="res-section-header">
     <div class="res-section-title">Getting Started</div>
-    <div class="res-section-count">Coming soon</div>
+    <div class="res-section-count">1 available</div>
   </div>
   <div class="res-grid">
-    <div class="res-card-placeholder">
-      <div class="placeholder-icon">📋</div>
-      <div class="placeholder-label">Which social channels are right for your business?</div>
+
+    <div class="res-card-locked">
+      <div class="locked-shimmer"></div>
+      <div class="locked-badge">
+        <span class="locked-type">Guide</span>
+        <span class="locked-free-tag">Free Download</span>
+      </div>
+      <div class="locked-title">Which Social Media Channels Are Right for Your Business?</div>
+      <p class="locked-desc">Not every platform is right for every business. This guide cuts through the noise and helps you work out where your time and budget will actually have an impact, with platform-by-platform breakdowns covering audiences, objectives, content formats and whether each channel is genuinely right for you.</p>
+      <div class="locked-preview">
+        <strong>What's inside</strong>
+        Detailed breakdowns of Facebook, Instagram, TikTok, LinkedIn, YouTube and Reddit. Key stats on monthly users, YoY growth and daily usage. Age and gender profiles for each platform. Best content formats and key objectives. A "right for your business if..." checklist per channel. Plus a summary mapping platforms to goals like brand awareness, lead generation and community engagement.
+      </div>
+      <div class="locked-gate">
+        <span class="locked-gate-note"><span class="lock-icon">🔒</span> Free — just leave us your email</span>
+        <button class="btn-locked" onclick="openModal('channels')">Get the Guide →</button>
+      </div>
     </div>
+
     <div class="res-card-placeholder">
       <div class="placeholder-icon">🎯</div>
       <div class="placeholder-label">How to define your target audience in 5 steps</div>
@@ -966,6 +981,14 @@
       btn: 'Send Me the Template →',
       successTitle: 'On its way to you now.',
       successDesc: 'Check your inbox — the template should land in the next couple of minutes. Check your spam folder if it doesn\'t show up.'
+    },
+    'channels': {
+      tag: 'Free Guide',
+      title: 'Which Social Media Channels Are Right for Your Business?',
+      desc: 'Leave your name and email and we\'ll send the guide straight over. No newsletter unless you ask for one.',
+      btn: 'Send Me the Guide →',
+      successTitle: 'On its way to you now.',
+      successDesc: 'Check your inbox — the guide should land in the next couple of minutes. Check your spam folder if it doesn\'t show up.'
     },
     'paid-social': {
       tag: 'Free Guide',
