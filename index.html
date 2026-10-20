@@ -329,6 +329,16 @@
       line-height: 1.7;
     }
     .jobsupport-note strong { color: var(--blue-lt); }
+    .js-banner {
+      background: #ffe66d;
+      color: var(--black);
+      text-align: center;
+      padding: 10px 24px;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .js-banner p { max-width: 900px; margin: 0 auto; }
+    .js-banner a { color: var(--navy); font-weight: 600; text-decoration: underline; }
     .jobsupport-more {
       text-align: center;
       font-size: 13px;
@@ -628,7 +638,11 @@
 <hr class="divider" />
 
 <!-- Job Support -->
-<section style="background: var(--cream);" id="job-support">
+<div id="job-support">
+<div class="js-banner" id="js-banner" data-hide-from="2026-11-01">
+  <p>⚠️ <strong>IMPORTANT INFO</strong> ⚠️<br>You can still book any of these 1 on 1 services however you might not receive a response before November due to availability. To help your search in the meantime, Diana has put a 50% sale on her CV template bespoke for Social Media and Influencer Marketing roles, which you can find <a href="https://ko-fi.com/socialmediaelder/shop" target="_blank" rel="noopener">here</a>.</p>
+</div>
+<section style="background: var(--cream);">
   <div class="section-inner">
     <p class="section-label">For job seekers</p>
     <h2 class="section-title">Applying for social media roles?</h2>
@@ -706,6 +720,7 @@
     </div>
   </div>
 </section>
+</div>
 
 <hr class="divider" />
 
@@ -783,5 +798,14 @@
   <p style="margin-top: 8px;">&copy; 2025 Firbow Social. All rights reserved.</p>
 </footer>
 
+<script>
+  // Auto-hide the availability banner from the date set in data-hide-from (YYYY-MM-DD)
+  (function () {
+    var b = document.getElementById('js-banner');
+    if (!b) return;
+    var d = new Date(b.getAttribute('data-hide-from') + 'T00:00:00');
+    if (new Date() >= d) b.style.display = 'none';
+  })();
+</script>
 </body>
 </html>
